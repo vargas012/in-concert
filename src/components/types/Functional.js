@@ -5,15 +5,7 @@ const FunctionalComponent = ({lorem, lorem2}) => {
     const [initialValue, setInitialValue ] = useState('blue')
     const [contador, setContador] = useState (0);
 
-    useEffect (()=> {
-        console.log ('App montada');
-        return () => {
-            console.log ('Will')
-        }
-        
-
-    }, []);
-    console.log ('Aqui seria el ...')
+    
 
     const agregar = () => {
             setContador (contador + 1);
@@ -41,3 +33,24 @@ const FunctionalComponent = ({lorem, lorem2}) => {
 };
 
 export default FunctionalComponent;
+
+const arreglo = [
+    {
+        nombre: 'pizza',
+        temperatura: 'caliente',
+    },
+    {
+        nombre: 'ensalada',
+        temperatura:'fria',
+    },
+    {
+        nombre: 'sopa',
+        temperatura: 'caliente',
+    },
+];
+
+function mapping () {
+    const nuevoArreglo = arreglo.map ((elemento) => elemento.nombre);
+    console.log (nuevoArreglo);
+}
+mapping ();
